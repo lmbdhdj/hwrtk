@@ -20,6 +20,8 @@ class _MyAppState extends State<MyApp> {
 
   String status = "";
 
+  String hwrtkAddress = "";
+
   @override
   void initState() {
     super.initState();
@@ -60,7 +62,7 @@ class _MyAppState extends State<MyApp> {
             children: [
               InkWell(
                   onTap: () {
-                    Hwrtk.connect("");
+                    Hwrtk.connect(hwrtkAddress);
                   },
                   child: const Text('连接设备', style: TextStyle(fontSize: 40))),
               InkWell(
